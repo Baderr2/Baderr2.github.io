@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIG-ER - Red Themed Online Store</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <header>
+        <h1>NIG-ER - Red Themed Online Store</h1>
+        <div class="burger-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <nav id="main-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <form action="/search" method="GET">
+            <input type="text" placeholder="Search products..." name="q">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="product">
+            <img src="car.jpg" alt="Car">
+            <h3>Cars</h3>
+            <button class="wishlist-btn" onclick="addToWishlist(this)">+</button>
+        </div>
+        <div class="product">
+            <img src="phone.jpg" alt="Phone">
+            <h3>Phones</h3>
+            <button class="wishlist-btn" onclick="addToWishlist(this)">+</button>
+        </div>
+        <div class="product">
+            <img src="house_mobile.jpg" alt="House Mobile">
+            <h3>House Mobiles</h3>
+            <button class="wishlist-btn" onclick="addToWishlist(this)">+</button>
+        </div>
+		<div class="product">
+            <img src="pc.jpg" alt="PC">
+            <h3>PC's</h3>
+            <button class="wishlist-btn" onclick="addToWishlist(this)">+</button>
+        </div>
+    </div>
+    <footer>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+    </footer>
+    <button onclick="topFunction()" class="button" id="myBtn" title="Go to top">Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

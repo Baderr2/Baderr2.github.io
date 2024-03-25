@@ -1,0 +1,191 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Dark gray background */
+    color: #f8f8f8; /* Light gray text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #990000; /* Dark red header */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially off-screen to the right */
+    width: 300px; /* Adjust the width as needed */
+    height: 100%;
+    background-color: #660000; /* Darker red navigation */
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1;
+    transition: right 0.3s ease; /* Smooth transition for sliding from right to left */
+}
+
+nav.active {
+    right: 0; /* Move the menu into view */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ffcccc; /* Light red text on hover */
+}
+
+.burger-icon {
+    display: block; /* Make sure the burger icon is initially visible */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure it's on top */
+}
+
+.burger-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #f8f8f8; /* Light gray */
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.burger-icon.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger-icon.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin: 4px 0;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.search-container button {
+    background-color: #990000; /* Dark red search button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #660000; /* Darker red on hover */
+}
+
+.container {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: calc(30% - 20px); /* Quarter width with margin */
+    margin: 10px;
+    background-color: #d13f34; /* Light gray background */
+    border: 1px solid #d13f34;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Increase size on hover */
+    background-color: #4d0500; /* Light gray background on hover */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #660000; /* Darker red footer */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcccc; /* Light red text on hover */
+}
+
+.button {
+    background-color: #990000; /* Dark red button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #660000; /* Darker red on hover */
+    transform: translateY(-2px); /* Move up slightly on hover */
+}
